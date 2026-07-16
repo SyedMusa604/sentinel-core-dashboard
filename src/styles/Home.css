@@ -188,14 +188,39 @@
   color: #f3f4f6;
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
+  .hero { min-height: 0; padding: 2rem 1rem; }
   .hero h1 { font-size: 2.8rem; }
   .tagline { font-size: 1.1rem; }
   .hero-logo-wrapper { width: 160px; height: 160px; }
-  .hero-stats { gap: 2rem; }
-  .stat-value { font-size: 2rem; }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .stat-item {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .stat-label {
+    display: block;
+    text-align: center;
+  }
+
+  .features { padding: 0 1rem 1rem; }
+  .features h2 { font-size: 1.8rem; }
   .features-grid { grid-template-columns: 1fr; }
   .quote { font-size: 1.2rem; }
-  .features { padding: 0 1rem 1rem; }
+  .quote-section { padding: 2rem 1.5rem; }
 }
