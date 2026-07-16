@@ -34,20 +34,10 @@
   color: #d1d5db;
   line-height: 1.8;
   font-size: 1.05rem;
-}
-
-.project-badge {
-  display: inline-block;
-  background: rgba(220, 38, 38, 0.1);
-  border: 1px solid rgba(220, 38, 38, 0.25);
-  color: #f87171;
-  padding: 4px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
   margin-bottom: 1rem;
 }
+
+.project-overview p:last-child { margin-bottom: 0; }
 
 .team-section {
   margin-bottom: 3rem;
@@ -73,26 +63,52 @@
   transition: all 0.3s ease;
 }
 
-.team-card:hover {
-  border-color: #dc2626;
-}
+.team-card:hover { border-color: #dc2626; }
 
-.team-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+.team-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #dc2626;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 16px rgba(220, 38, 38, 0.25);
+  letter-spacing: 1px;
 }
 
 .team-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
   color: #f3f4f6;
 }
 
-.team-role {
-  color: #dc2626;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.team-links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.team-link {
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.team-link:hover {
+  background: rgba(220, 38, 38, 0.3);
+  transform: translateY(-2px);
 }
 
 .supervisor-section {
@@ -109,10 +125,7 @@
   gap: 2rem;
 }
 
-.supervisor-icon {
-  font-size: 3rem;
-  flex-shrink: 0;
-}
+.supervisor-icon { font-size: 3rem; flex-shrink: 0; }
 
 .supervisor-content h3 {
   font-size: 1.5rem;
@@ -128,19 +141,11 @@
   margin-bottom: 0.5rem;
 }
 
-.supervisor-desc {
-  color: #d1d5db;
-  line-height: 1.6;
-}
+.supervisor-desc { color: #d1d5db; line-height: 1.6; }
 
-.tech-stack {
-  margin-bottom: 3rem;
-}
+.tech-stack { margin-bottom: 3rem; }
 
-.tech-stack h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+.tech-stack h2 { text-align: center; margin-bottom: 2rem; }
 
 .tech-grid {
   display: grid;
@@ -156,10 +161,7 @@
   transition: all 0.3s ease;
 }
 
-.tech-card:hover {
-  border-color: #dc2626;
-  transform: scale(1.02);
-}
+.tech-card:hover { border-color: #dc2626; transform: scale(1.02); }
 
 .tech-card h3 {
   color: #f3f4f6;
@@ -169,11 +171,7 @@
   border-bottom: 2px solid #dc2626;
 }
 
-.tech-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+.tech-list { display: flex; flex-direction: column; gap: 0.5rem; }
 
 .tech-item {
   display: flex;
@@ -186,25 +184,15 @@
   transition: border-color 0.3s ease;
 }
 
-.tech-item:hover {
-  border-color: #dc2626;
-}
+.tech-item:hover { border-color: #dc2626; }
 
-.tech-logo {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
+.tech-logo { width: 28px; height: 28px; object-fit: contain; }
 
-.tech-name {
-  color: #f3f4f6;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
+.tech-name { color: #f3f4f6; font-size: 0.9rem; font-weight: 500; }
 
 .disclaimer {
-  background: rgba(249, 115, 22, 0.06);
-  border: 1px solid rgba(249, 115, 22, 0.2);
+  background: rgba(249,115,22,0.06);
+  border: 1px solid rgba(249,115,22,0.2);
   border-left: 4px solid #f97316;
   border-radius: 10px;
   padding: 16px 20px;
@@ -214,9 +202,7 @@
   line-height: 1.6;
 }
 
-.disclaimer strong {
-  color: #fb923c;
-}
+.disclaimer strong { color: #fb923c; }
 
 @media (max-width: 768px) {
   .about-page { padding: 1rem; }

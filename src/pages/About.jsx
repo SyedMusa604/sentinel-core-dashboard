@@ -3,9 +3,24 @@ import '../styles/About.css';
 
 function About() {
   const team = [
-    { name: 'Musa', role: 'Developer' },
-    { name: 'Sahran', role: 'Developer' },
-    { name: 'Wajid', role: 'Developer' },
+    { 
+      fullname: 'Musa Farrukh',
+      initials: 'MF',
+      github: 'https://github.com/SyedMusa604',
+      linkedin: 'https://www.linkedin.com/in/musafarrukh'
+    },
+    { 
+      fullname: 'Saran Shah',
+      initials: 'SS',
+      github: '#',
+      linkedin: '#'
+    },
+    { 
+      fullname: 'Wajid Mehmood',
+      initials: 'WM',
+      github: '#',
+      linkedin: '#'
+    },
   ];
 
   const techStack = [
@@ -107,7 +122,8 @@ function About() {
           Sentinel Core is an advanced threat analysis platform that inspects files across
           multiple layers without ever executing them. Upload any file and get instant
           cryptographic verification, PE header inspection, entropy scoring, behavioral API
-          analysis, and real-time CVE intelligence from the NVD database all aggregated into a single risk score so you know exactly what you're dealing with.
+          analysis, and real-time CVE intelligence from the NVD database — all aggregated
+          into a single risk score so you know exactly what you're dealing with.
         </p>
         <p>
           Built for security researchers, analysts, and anyone who needs to verify a file
@@ -138,8 +154,16 @@ function About() {
               variants={itemVariants}
               whileHover={{ y: -8, boxShadow: '0 12px 24px rgba(220, 38, 38, 0.3)' }}
             >
-              <h3>{member.name}</h3>
-              <p className="team-role">{member.role}</p>
+              <div className="team-avatar">{member.initials}</div>
+              <h3>{member.fullname}</h3>
+              <div className="team-links">
+                <a href={member.github} target="_blank" rel="noreferrer" className="team-link" title="GitHub">
+                  <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" width="18" />
+                </a>
+                <a href={member.linkedin} target="_blank" rel="noreferrer" className="team-link" title="LinkedIn">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="18" />
+                </a>
+              </div>
             </motion.div>
           ))}
         </motion.div>
