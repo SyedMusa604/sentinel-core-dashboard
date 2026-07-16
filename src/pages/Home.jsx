@@ -179,7 +179,7 @@ function Home() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <p className="quote">"Security is not a feature — it's a requirement."</p>
+        <p className="quote">"AI assists analysts, it does not replace them."</p>
       </motion.section>
 
       {/* CTA */}
