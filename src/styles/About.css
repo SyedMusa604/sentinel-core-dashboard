@@ -1,0 +1,226 @@
+.about-page {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f3f4f6 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #f3f4f6;
+}
+
+.project-overview {
+  background: linear-gradient(135deg, rgba(42,42,42,0.5) 0%, rgba(26,26,26,0.5) 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.project-overview p {
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.project-badge {
+  display: inline-block;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  color: #f87171;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.team-section {
+  margin-bottom: 3rem;
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background: linear-gradient(135deg, rgba(42,42,42,0.5) 0%, rgba(26,26,26,0.5) 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  border-color: #dc2626;
+}
+
+.team-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #f3f4f6;
+}
+
+.team-role {
+  color: #dc2626;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.supervisor-section {
+  background: linear-gradient(135deg, rgba(220,38,38,0.1) 0%, rgba(220,38,38,0.05) 100%);
+  border: 1px solid rgba(220,38,38,0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.supervisor-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.supervisor-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.supervisor-content h3 {
+  font-size: 1.5rem;
+  color: #f3f4f6;
+  margin-bottom: 0.25rem;
+}
+
+.supervisor-title {
+  color: #dc2626;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.supervisor-desc {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.tech-stack {
+  margin-bottom: 3rem;
+}
+
+.tech-stack h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tech-card {
+  background: linear-gradient(135deg, rgba(42,42,42,0.5) 0%, rgba(26,26,26,0.5) 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  border-color: #dc2626;
+  transform: scale(1.02);
+}
+
+.tech-card h3 {
+  color: #f3f4f6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #dc2626;
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  border: 1px solid #333;
+  transition: border-color 0.3s ease;
+}
+
+.tech-item:hover {
+  border-color: #dc2626;
+}
+
+.tech-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.tech-name {
+  color: #f3f4f6;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.disclaimer {
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  border-left: 4px solid #f97316;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.disclaimer strong {
+  color: #fb923c;
+}
+
+@media (max-width: 768px) {
+  .about-page { padding: 1rem; }
+  .about-page h1 { font-size: 1.8rem; }
+  .team-grid, .tech-grid { grid-template-columns: 1fr; }
+  .supervisor-card { flex-direction: column; text-align: center; }
+}

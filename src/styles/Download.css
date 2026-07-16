@@ -1,0 +1,308 @@
+.download-page {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+.download-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--text-light) 0%, var(--accent-red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.download-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--text-light) 0%, var(--accent-red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Download Section */
+.download-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.download-card {
+  background: linear-gradient(135deg, rgba(42, 42, 42, 0.5) 0%, rgba(26, 26, 26, 0.5) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.download-card:hover {
+  border-color: var(--accent-red);
+  background: linear-gradient(135deg, rgba(42, 42, 42, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(220, 38, 38, 0.2);
+}
+
+.download-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.download-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--text-light) 0%, var(--accent-red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.version {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.download-btn {
+  background: var(--accent-red);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.download-btn:hover {
+  background: var(--accent-red-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.4);
+}
+
+.download-btn.secondary {
+  background: transparent;
+  color: var(--accent-red);
+  border: 2px solid var(--accent-red);
+}
+
+.download-btn.secondary:hover {
+  background: var(--accent-red);
+  color: white;
+}
+
+.file-size {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Requirements Section */
+.requirements {
+  margin-bottom: 4rem;
+}
+
+.requirements h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.requirement-card {
+  background: linear-gradient(135deg, rgba(42, 42, 42, 0.5) 0%, rgba(26, 26, 26, 0.5) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.requirement-card:hover {
+  border-color: var(--accent-red);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.2);
+}
+
+.req-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.requirement-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.requirement-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Installation Section */
+.installation {
+  background: linear-gradient(135deg, rgba(42, 42, 42, 0.5) 0%, rgba(26, 26, 26, 0.5) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.installation h2 {
+  margin-bottom: 1.5rem;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.tab-content {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.tab-content h3 {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-red);
+}
+
+.tab-content ol {
+  list-style-position: inside;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tab-content li {
+  color: var(--text-secondary);
+}
+
+.tab-content code {
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: var(--accent-red-light);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 0.5rem;
+  word-break: break-all;
+}
+
+/* Features Highlight */
+.features-highlight {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.features-highlight h2 {
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.feature-item {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid var(--accent-red);
+  border-radius: 4px;
+  color: var(--text-light);
+}
+
+/* Support Section */
+.support {
+  text-align: center;
+  padding: 2rem;
+}
+
+.support h2 {
+  margin-bottom: 1rem;
+}
+
+.support p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.support-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.support-link {
+  background: var(--accent-red);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.support-link:hover {
+  background: var(--accent-red-light);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .download-page {
+    padding: 1rem;
+  }
+
+  .download-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .download-section,
+  .requirements-grid,
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .installation,
+  .features-highlight {
+    padding: 1.5rem;
+  }
+
+  .support-links {
+    flex-direction: column;
+  }
+
+  .support-link {
+    width: 100%;
+    text-align: center;
+  }
+}
