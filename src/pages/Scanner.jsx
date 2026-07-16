@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../styles/Scanner.css';
 
 // ── Config ────────────────────────────────────────────────────────
-const API_URL = 'http://localhost:5000'; // ← Change to Azure URL when deployed
+const API_URL = 'https://sentinel-core-api.azurewebsites.net'; // Azure URL 
 
 const SUPPORTED_FORMATS = [
   { ext: 'EXE', desc: 'Windows Executable' },
