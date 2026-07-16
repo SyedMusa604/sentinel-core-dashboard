@@ -9,6 +9,40 @@ function Download() {
     { icon: '🌐', title: 'Internet', desc: 'For CVE threat intelligence' },
   ];
 
+  const features = [
+    { icon: '🔄', text: 'Real-time file scanning' },
+    { icon: '🔐', text: 'Hash verification (MD5, SHA1, SHA256)' },
+    { icon: '⚡', text: 'Static analysis with entropy detection' },
+    { icon: '🧠', text: 'Behavioral API inspection' },
+    { icon: '🌐', text: 'CVE threat intelligence (NVD API)' },
+    { icon: '🤖', text: 'AI-powered threat scoring' },
+    { icon: '📄', text: 'PDF, DOCX & Audio file support' },
+    { icon: '📋', text: 'Detailed PDF reports' },
+  ];
+
+  const platforms = [
+    {
+      name: 'Windows',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg',
+      available: true,
+    },
+    {
+      name: 'macOS',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg',
+      available: false,
+    },
+    {
+      name: 'Android',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
+      available: false,
+    },
+    {
+      name: 'iOS',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg',
+      available: false,
+    },
+  ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
@@ -37,32 +71,19 @@ function Download() {
       >
         <div className="platform-notice-inner">
           <div className="platform-row">
-            <span className="platform-item available">
-              <span className="platform-icon">🪟</span>
-              <span>Windows</span>
-              <span className="platform-badge available-badge">Available</span>
-            </span>
-            <span className="platform-divider">|</span>
-            <span className="platform-item coming">
-              <span className="platform-icon">🍎</span>
-              <span>macOS</span>
-              <span className="platform-badge coming-badge">Coming Soon</span>
-            </span>
-            <span className="platform-divider">|</span>
-            <span className="platform-item coming">
-              <span className="platform-icon">🤖</span>
-              <span>Android</span>
-              <span className="platform-badge coming-badge">Coming Soon</span>
-            </span>
-            <span className="platform-divider">|</span>
-            <span className="platform-item coming">
-              <span className="platform-icon">📱</span>
-              <span>iOS</span>
-              <span className="platform-badge coming-badge">Coming Soon</span>
-            </span>
+            {platforms.map((p, idx) => (
+              <div key={idx} className="platform-item-simple">
+                <img src={p.logo} alt={p.name} className="platform-logo-simple" />
+                <span className="platform-name-simple">{p.name}</span>
+                <span className={`platform-badge ${p.available ? 'available-badge' : 'coming-badge'}`}>
+                  {p.available ? 'Available' : 'Coming Soon'}
+                </span>
+              </div>
+            ))}
           </div>
           <p className="platform-note">
-            💡 Mac, Android & iOS users can still scan files using the <strong>Web Scanner</strong> above — no download needed!
+            💡 Mac, Android & iOS users can still scan files using the{' '}
+            <strong>Web Scanner</strong> — no download needed!
           </p>
         </div>
       </motion.div>
@@ -78,35 +99,53 @@ function Download() {
           <div className="download-icon">📦</div>
           <h2>Executable</h2>
           <p className="version">v1.0 | Latest Release</p>
-          <div className="windows-only-badge">🪟 Windows Only</div>
-          <motion.a
-            href="https://github.com/SyedMusa604/sentinel-core/releases/download/v1.0/SentinelCore.exe"
-            className="download-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            download
-          >
-            📥 Download .exe
-          </motion.a>
+          <div className="card-buttons">
+            <div className="info-tag windows-tag-btn">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
+                alt="Windows"
+                width="16"
+              />
+              Windows Only
+            </div>
+            <motion.a
+              href="https://github.com/SyedMusa604/sentinel-core/releases/download/v1.0/SentinelCore.exe"
+              className="action-btn primary-btn"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              download
+            >
+              📥 Download .exe
+            </motion.a>
+          </div>
           <p className="file-size">≈ 15 MB</p>
-          <p className="download-note">Includes logo files — place all in same folder</p>
+          <p className="download-note">Download logo.png & logo.ico from release — place all in same folder</p>
         </motion.div>
 
         <motion.div className="download-card" variants={itemVariants} whileHover={{ y: -8 }}>
           <div className="download-icon">📁</div>
           <h2>Run from Source</h2>
           <p className="version">Development Setup</p>
-          <div className="windows-only-badge cross-platform">🌐 Cross Platform</div>
-          <motion.a
-            href="https://github.com/SyedMusa604/sentinel-core"
-            target="_blank"
-            rel="noreferrer"
-            className="download-btn secondary"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            🔗 View on GitHub
-          </motion.a>
+          <div className="card-buttons">
+            <div className="info-tag cross-tag-btn">
+              <img
+                src="https://img.icons8.com/ios-filled/50/ffffff/github.png"
+                alt="GitHub"
+                width="16"
+              />
+              Cross Platform
+            </div>
+            <motion.a
+              href="https://github.com/SyedMusa604/sentinel-core"
+              target="_blank"
+              rel="noreferrer"
+              className="action-btn secondary-btn"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              🔗 View on GitHub
+            </motion.a>
+          </div>
           <p className="file-size">Clone & Setup Required</p>
           <p className="download-note">Python 3.11+ required</p>
         </motion.div>
@@ -184,7 +223,7 @@ function Download() {
         </div>
       </motion.section>
 
-      {/* Features */}
+      {/* What You Get */}
       <motion.section
         className="features-highlight"
         initial={{ opacity: 0 }}
@@ -193,14 +232,12 @@ function Download() {
       >
         <h2>What You Get</h2>
         <div className="feature-list">
-          <div className="feature-item">✅ Real-time file scanning</div>
-          <div className="feature-item">✅ Hash verification (MD5, SHA1, SHA256)</div>
-          <div className="feature-item">✅ Static analysis with entropy detection</div>
-          <div className="feature-item">✅ Behavioral API inspection</div>
-          <div className="feature-item">✅ CVE threat intelligence (NVD API)</div>
-          <div className="feature-item">✅ AI-powered threat scoring</div>
-          <div className="feature-item">✅ PDF, DOCX & Audio file support</div>
-          <div className="feature-item">✅ Detailed PDF reports</div>
+          {features.map((f, idx) => (
+            <div key={idx} className="feature-item">
+              <span className="feature-item-icon">{f.icon}</span>
+              <span>{f.text}</span>
+            </div>
+          ))}
         </div>
       </motion.section>
 
