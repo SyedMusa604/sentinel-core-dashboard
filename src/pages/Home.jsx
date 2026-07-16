@@ -37,7 +37,6 @@ function Home() {
         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="32" cy="32" r="22" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
           <path d="M22 32 L28 38 L42 24" stroke="#dc2626" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="32" cy="32" r="6" fill="rgba(220,38,38,0.2)"/>
         </svg>
       )
     },
@@ -108,6 +107,7 @@ function Home() {
 
   return (
     <div className="home">
+
       {/* Hero */}
       <motion.section className="hero" variants={containerVariants} initial="hidden" animate="visible">
         <motion.div
@@ -190,9 +190,18 @@ function Home() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2>Ready to scan?</h2>
+        <motion.h2
+          className="cta-heading"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Ready to scan?
+        </motion.h2>
         <Link to="/scanner" className="btn btn-primary btn-large">Go to Scanner</Link>
       </motion.section>
+
     </div>
   );
 }

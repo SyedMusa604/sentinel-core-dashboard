@@ -3,21 +3,149 @@ import '../styles/Download.css';
 
 function Download() {
   const requirements = [
-    { icon: '💻', title: 'Windows 10+', desc: 'Windows OS required' },
-    { icon: '💾', title: '100 MB', desc: 'Free disk space' },
-    { icon: '⚙️', title: 'Python 3.8+', desc: 'For backend operations' },
-    { icon: '🌐', title: 'Internet', desc: 'For CVE threat intelligence' },
+    {
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+          <rect x="8" y="12" width="48" height="34" rx="4" stroke="#dc2626" strokeWidth="2.5" fill="rgba(220,38,38,0.08)"/>
+          <line x1="20" y1="52" x2="44" y2="52" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="32" y1="46" x2="32" y2="52" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <rect x="14" y="18" width="36" height="22" rx="2" fill="rgba(220,38,38,0.1)" stroke="#dc2626" strokeWidth="1.5"/>
+        </svg>
+      ),
+      title: 'Windows 10+',
+      desc: 'Windows OS required'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+          <rect x="12" y="8" width="40" height="48" rx="4" stroke="#dc2626" strokeWidth="2.5" fill="rgba(220,38,38,0.08)"/>
+          <line x1="20" y1="20" x2="44" y2="20" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="20" y1="28" x2="44" y2="28" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="20" y1="36" x2="36" y2="36" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="44" cy="44" r="6" stroke="#dc2626" strokeWidth="2" fill="rgba(220,38,38,0.15)"/>
+          <line x1="44" y1="41" x2="44" y2="44" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="44" cy="46.5" r="1.5" fill="#dc2626"/>
+        </svg>
+      ),
+      title: '100 MB',
+      desc: 'Free disk space'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+          <rect x="10" y="16" width="44" height="32" rx="4" stroke="#dc2626" strokeWidth="2.5" fill="rgba(220,38,38,0.08)"/>
+          <path d="M20 32 L26 26 L32 32 L38 24 L44 30" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="20" cy="32" r="2.5" fill="#dc2626"/>
+          <circle cx="44" cy="30" r="2.5" fill="#dc2626"/>
+        </svg>
+      ),
+      title: 'Python 3.8+',
+      desc: 'For backend operations'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+          <circle cx="32" cy="32" r="22" stroke="#dc2626" strokeWidth="2.5" fill="rgba(220,38,38,0.08)"/>
+          <ellipse cx="32" cy="32" rx="10" ry="22" stroke="#dc2626" strokeWidth="2"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M14 20 Q32 26 50 20" stroke="#dc2626" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+          <path d="M14 44 Q32 38 50 44" stroke="#dc2626" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+        </svg>
+      ),
+      title: 'Internet',
+      desc: 'For CVE threat intelligence'
+    },
   ];
 
   const features = [
-    { icon: '🔄', text: 'Real-time file scanning' },
-    { icon: '🔐', text: 'Hash verification (MD5, SHA1, SHA256)' },
-    { icon: '⚡', text: 'Static analysis with entropy detection' },
-    { icon: '🧠', text: 'Behavioral API inspection' },
-    { icon: '🌐', text: 'CVE threat intelligence (NVD API)' },
-    { icon: '🤖', text: 'AI-powered threat scoring' },
-    { icon: '📄', text: 'PDF, DOCX & Audio file support' },
-    { icon: '📋', text: 'Detailed PDF reports' },
+    {
+      text: 'Real-time file scanning',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <circle cx="32" cy="32" r="20" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <path d="M32 20 L32 32 L40 36" stroke="#dc2626" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="32" cy="32" r="3" fill="#dc2626"/>
+        </svg>
+      )
+    },
+    {
+      text: 'Hash verification (MD5, SHA1, SHA256)',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <rect x="8" y="20" width="48" height="32" rx="4" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <path d="M20 20V16a12 12 0 0124 0v4" stroke="#dc2626" strokeWidth="3" strokeLinecap="round"/>
+          <circle cx="32" cy="36" r="5" fill="#dc2626" fillOpacity="0.8"/>
+          <line x1="32" y1="41" x2="32" y2="46" stroke="#dc2626" strokeWidth="3" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      text: 'Static analysis with entropy detection',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <rect x="10" y="8" width="44" height="48" rx="4" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <line x1="18" y1="22" x2="46" y2="22" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="18" y1="30" x2="46" y2="30" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="18" y1="38" x2="34" y2="38" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      text: 'Behavioral API inspection',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <circle cx="32" cy="32" r="20" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <path d="M22 32 L28 38 L42 24" stroke="#dc2626" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      text: 'CVE threat intelligence (NVD API)',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <circle cx="32" cy="32" r="20" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <ellipse cx="32" cy="32" rx="9" ry="20" stroke="#dc2626" strokeWidth="2"/>
+          <line x1="12" y1="32" x2="52" y2="32" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      text: 'AI-powered threat scoring',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <rect x="16" y="20" width="32" height="28" rx="6" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <circle cx="24" cy="32" r="3" fill="#dc2626"/>
+          <circle cx="32" cy="32" r="3" fill="#dc2626"/>
+          <circle cx="40" cy="32" r="3" fill="#dc2626"/>
+          <line x1="24" y1="20" x2="24" y2="14" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="40" y1="20" x2="40" y2="14" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="32" y1="48" x2="32" y2="54" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      text: 'PDF, DOCX & Audio file support',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <rect x="12" y="8" width="40" height="48" rx="4" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <path d="M22 8 L22 22 L36 22" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <line x1="20" y1="32" x2="44" y2="32" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="20" y1="40" x2="44" y2="40" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      text: 'Detailed PDF reports',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <rect x="10" y="8" width="44" height="48" rx="4" stroke="#dc2626" strokeWidth="3" fill="rgba(220,38,38,0.1)"/>
+          <line x1="18" y1="22" x2="46" y2="22" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="18" y1="30" x2="46" y2="30" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="18" y1="38" x2="46" y2="38" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="18" y1="46" x2="32" y2="46" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round"/>
+        </svg>
+      )
+    },
   ];
 
   const platforms = [
@@ -234,7 +362,7 @@ function Download() {
         <div className="feature-list">
           {features.map((f, idx) => (
             <div key={idx} className="feature-item">
-              <span className="feature-item-icon">{f.icon}</span>
+              <span className="feature-item-icon">{f.svg}</span>
               <span>{f.text}</span>
             </div>
           ))}
